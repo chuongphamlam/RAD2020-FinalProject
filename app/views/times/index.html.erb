@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Website Layout</title>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+     <div class="abc">
+        <div class="topnav">
+        <a href="mailto:s3660068@student.rmit.edu.au">Contact US</a>
+            <a href="/">ShowCase</a>
+        </div>
+        
+
+        <div class="header">
+            <h1>Clock+</h1>
+            <p>Clock+ built by Chuong Pham Lam-s3660068-Distinction  LEVEL.</p>
+        </div>
+
+        <div class="row">
+
+                
+           
+                <div style="padding: 130px 183px;" class="column">
+                    <h3><i class="fa fa-circle green"></i>  Business time</h3>
+                    <h3><i class="fa fa-circle yellow"></i>  Business overtime</h3>
+                    <h3><i class="fa fa-circle red"></i>  Personal times</h3>
+                    <h3><i class="fa fa-moon-o" aria-hidden="true"></i>  Sleeping time</h3>
+                </div>
+
+                <div style="padding: 30px 30px;" id="12h" class="column show">
+                    <table>
+                        <% @datas.each do |data| %>
+                        <tr>
+                        <td style="text-align:center" ><h2 name="country"> <%= data["contry"]%><h2> <span> <%= data["offset"]%>h</span>  </td>
+                        <td style="text-align:center" ><h2 class="time_now"><%= data["time_now_12"]%><h2> <span class="date"> <%= data["date"]%>  <i class="<%= data["type"]%>" ></i> </td>  
+                        
+                        </tr>
+                        <% end %>
+                         
+                    </table> 
+                    <hr>
+                    <h1 style="text-align: center;" ><i class="fa fa-plus" aria-hidden="true"></i></h1>
+
+                </div>
+
+
+                  <div style="padding: 30px 30px" style="display: none;" id ="24h" class="column show">
+                    
+                    <table>
+                        <% @datas.each do |data| %>
+                        <tr>
+                        <td style="text-align:center" ><h2 name="country"> <%= data["contry"]%><h2> <span> <%= data["offset"]%>h</span> </td>
+                        <td style="text-align:center" ><h2 class="time_now"><%= data["time_now_24"]%><h2> <span class="date"> <%= data["date"]%> <i class="<%= data["type"]%>"></i>  </span>  </td>  
+                        </tr>
+                        <% end %>
+                        
+                    </table>  
+                    <hr>
+                    <h1 style="text-align: center;" ><i class="fa fa-plus" aria-hidden="true"></i></h1>
+                    
+
+
+                </div>
+
+
+
+                <div style="padding: 130px 183px;" class="column">
+                    <h4>Clock Theme</h4>
+                    <ul>
+                        <li><a href="#black">black</a></li>
+                        <li><a href="#blue">blue</a></li>
+                        <li><a href="#white">white</a></li>
+                    </ul>
+                    <input type="checkbox" checked style="margin-left: 20px; margin-top: 13px;" id="checkbox" /> 24- Hour Clock
+                </div>
+        </div>
+
+
+
+
+          
+
+
+
+       
+
+
+            <script>
+
+                        $('#12h').css("display", "block")
+                         $('#24h').css("display", "none")
+                $(document).ready(function(){
+                    if ($(location).attr('href').includes("black")) {
+                        $('.abc').css("background-color", "#6f6d72")
+                    } else if ($(location).attr('href').includes("white")) {
+                         $('.abc').addClass("abc")
+                    } else if ($(location).attr('href').includes("blue")) {
+                         $('.abc').css("background-color", "#4285f4")
+                    } 
+                });
+
+                  $(document).ready(function(){
+                     $('input[type="checkbox"]').click(function(){
+                    if($(this).prop("checked") == true){
+                            $('#12h').css("display", "none")
+                            $('#24h').css("display", "block")
+                    }
+                    else {
+                         $('#12h').css("display", "block")
+                         $('#24h').css("display", "none")
+                    } 
+                });
+
+
+                
+
+
+            });
+
+             </script> 
+
+
+    
+            </div>
+
+            <div  classs="end_page"></div>
+
+            <div class="footer">
+
+             <div class="col">
+                 <h2>Clock+</h2>
+                 Chuong Pham Lam | Student number : s3660068  <br>
+                 Distinction  LEVEL 
+             </div>
+            <div class="col">
+            <div style="margin-left: 320px;">
+            Share Social 
+            <a href="https://www.facebook.com/"><img src="https://image.flaticon.com/icons/svg/145/145802.svg"></a>
+
+            <img src="https://www.flaticon.com/premium-icon/icons/svg/2392/2392489.svg">
+
+            <a href="https://twitter.com/"> <img src="https://www.flaticon.com/premium-icon/icons/svg/2392/2392499.svg"></a>
+            </div>
+            </div>
+
+            </div> 
+
+          
+
+    </body>
+</html>
+
+
+

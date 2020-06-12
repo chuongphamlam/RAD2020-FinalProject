@@ -1,0 +1,188 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #dee2e6;
+}
+
+
+span {
+
+    font-size: 17px;
+    margin-right: 60px;
+}
+.date{
+    margin-right: -20px;
+}
+img {
+    width: 37px;
+    padding-top: 57px;
+}
+
+/* Style the header */
+.header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #FFFFFF !important;
+    padding-top: 20px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul {
+    width: 194px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+    display: flex;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4caf50;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    background-color: transparent;
+    float: left;
+    width: 33.33%;
+    height: 500px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 66px;
+}
+
+.show {
+    border-radius: 18px;
+    -webkit-box-shadow: -1px 32px 40px 19px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: -1px 32px 40px 19px rgba(0, 0, 0, 0.62);
+    box-shadow: -1px 32px 40px 19px rgba(0, 0, 0, 0.62);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.abc {
+    width: 100%;
+    display: inline-block;
+}
+
+h3 h2 h4 h5 a {
+    font: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif !important;
+    font: bold;
+}
+
+.red {
+        color: red;
+}
+
+.yellow{
+        color: yellow;
+}
+
+.green {
+        color: green;
+}
+
+.col{
+    width: 45%;
+    float: left;
+    margin-left: 16px;
+    height: 68px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+
